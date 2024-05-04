@@ -1,0 +1,76 @@
+﻿<Window x:Class="AvtoSityApp.Windows.WindowBrigadier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvtoSityApp.Windows"
+        mc:Ignorable="d" WindowStartupLocation="CenterOwner"
+        Title="Редактор Бригадир" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Добавление" Click="Button_Click_1" Margin="20,0,20,0"/>
+            <Button Content="Редактирование" Click="Button_Click_2" Margin="20,0,20,0"/>
+            <Button Content="Удаление" Click="Button_Click_3" Margin="20,0,20,0"/>
+            <Button Content="Сохранить результат в БД" Click="Button_Click" Margin="20,0,20,0"/>
+        </StackPanel>
+
+        <Grid x:Name="grid1" Grid.Row="1" Visibility="Collapsed">
+            <TextBlock HorizontalAlignment="Left" Margin="134,30,0,0" TextWrapping="Wrap" Text="Имя:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text1name" HorizontalAlignment="Left" Margin="244,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="107,67,0,0" TextWrapping="Wrap" Text="Фамилия:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text1sername" HorizontalAlignment="Left" Margin="244,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="107,104,0,0" TextWrapping="Wrap" Text="Отчество:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text1personame" HorizontalAlignment="Left" Margin="244,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="111,141,0,0" TextWrapping="Wrap" Text="Возраст:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text1age" HorizontalAlignment="Left" Margin="244,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="107,187,0,0" TextWrapping="Wrap" Text="Телефон:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text1phone" HorizontalAlignment="Left" Margin="244,192,0,0" TextWrapping="Wrap" Text="+37599" VerticalAlignment="Top" Width="238" Height="21"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="107,224,0,0" TextWrapping="Wrap" Text="Доступная бригада:" VerticalAlignment="Top" FontSize="24"/>
+            <ComboBox x:Name="combobox1brigade" Margin="328,224,0,0" Height="24" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="107,261,0,0" TextWrapping="Wrap" Text="Мастер:" VerticalAlignment="Top" FontSize="24"/>
+            <ComboBox x:Name="combobox1master" Margin="215,261,0,0" Height="24" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="button1" Content="Добавить" HorizontalAlignment="Center" 
+                    Click="Button_Click_4"
+                    Margin="0,342,0,0" VerticalAlignment="Top" Height="29" Width="88"/>
+
+        </Grid>
+        <Grid x:Name="grid2" Grid.Row="1" Visibility="Collapsed">
+            <TextBlock HorizontalAlignment="Left" Margin="107,30,0,0" TextWrapping="Wrap" Text="Новое Имя:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text2name" HorizontalAlignment="Left" Margin="244,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="60,67,0,0" TextWrapping="Wrap" Text="Новая Фамилия:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text2sername" HorizontalAlignment="Left" Margin="244,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="52,104,0,0" TextWrapping="Wrap" Text="Новое Отчество:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text2personame" HorizontalAlignment="Left" Margin="244,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="63,141,0,0" TextWrapping="Wrap" Text="Новый Возраст:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text2age" HorizontalAlignment="Left" Margin="244,152,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="238" Height="21"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="55,181,0,0" TextWrapping="Wrap" Text="Новый Телефон:" VerticalAlignment="Top" FontSize="24"/>
+            <TextBox x:Name="text2phone" HorizontalAlignment="Left" Margin="244,192,0,0" TextWrapping="Wrap" Text="+37599" VerticalAlignment="Top" Width="238" Height="21"/>
+
+            <TextBlock HorizontalAlignment="Left" Margin="33,224,0,0" TextWrapping="Wrap" Text="Новая Доступная бригада:" VerticalAlignment="Top" FontSize="24"/>
+            <ComboBox x:Name="combobox2brigade" Margin="338,232,0,0" Height="24" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top"></ComboBox>
+            <TextBlock HorizontalAlignment="Left" Margin="42,261,0,0" TextWrapping="Wrap" Text="Новый Мастер:" VerticalAlignment="Top" FontSize="24"/>
+            <ComboBox x:Name="combobox2master" Margin="223,269,0,0" Height="24" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button Content="Редактировать" HorizontalAlignment="Center" 
+        Click="Button_Click_5"
+        Margin="0,330,0,0" VerticalAlignment="Top" Height="29" Width="86" RenderTransformOrigin="0.504,0.513"/>
+            <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="*Оставьте поле пустым, если его не нужно редактировать." VerticalAlignment="Top"/>
+            <ComboBox x:Name="comboboxEdit" Margin="497,14,0,0" Height="24" Width="280" HorizontalAlignment="Left" VerticalAlignment="Top"></ComboBox>
+        </Grid>
+        <Grid x:Name="grid3" Grid.Row="1"  Visibility="Collapsed">
+            <ComboBox x:Name="comboboxDelete" HorizontalAlignment="Left" Height="33" Margin="225,37,0,0" VerticalAlignment="Top" Width="324"/>
+            <Button Content="Удалить" HorizontalAlignment="Left" 
+Click="Button_Click_6"
+Margin="344,178,0,0" VerticalAlignment="Top" Height="29" Width="86"/>
+        </Grid>
+    </Grid>
+</Window>

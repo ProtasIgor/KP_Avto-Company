@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\dark.png" />
+    <None Remove="Images\info.png" />
+    <None Remove="Images\light.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Resources\Dark.xaml" />
+    <Page Remove="Resources\Light.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\dark.png" />
+    <Resource Include="Images\info.png" />
+    <Resource Include="Images\light.png" />
+    <Resource Include="Resources\Dark.xaml" />
+    <Resource Include="Resources\Light.xaml" />
+  </ItemGroup>
+
+</Project>
